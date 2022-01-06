@@ -9,9 +9,9 @@ This is my first project written from the ground up in Typescript. I've not real
 ```
 PORT
 URL
-DATABASE
+DB_DATABASE
 USER
-PASSWORD
+DB_PASSWORD
 TOKEN_SECRET
 ```
 2. `npm run migrate` - creates or migrates the database
