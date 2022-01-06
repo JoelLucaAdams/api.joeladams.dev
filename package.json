@@ -37,6 +37,7 @@
     "eslint-plugin-import": "^2.25.3",
     "express-pino-logger": "^7.0.0",
     "nodemon": "^2.0.15",
+    "npx": "^10.2.2",
     "pino-pretty": "^7.3.0"
   }
 }
