@@ -1,4 +1,4 @@
-import knex from '../db';
+import knex from '../knex';
 import { User } from '../interfaces/users.interface';
 import log from '../log';
 
