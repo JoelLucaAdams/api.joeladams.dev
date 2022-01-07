@@ -22,7 +22,7 @@ This is my first project written from the ground up in Typescript. I've not real
 
 - `npm start` - Runs and builds the project
 - `npm run build` - Compiles the Typescript code to JavaScript
-- `npm run database-build` - Creates the database, migrates to the latest versions and runs seeding. (`npm dev` runs this every time)
+- `npm run database-build` - Creates the database, migrates to the latest versions and runs seeding. (`npm start` runs this every time)
 - `npm run database-teardown` - Rolls-back the latest database migration
 - `npm run database-update` - Runs the latest migration
 - `npm run kill-port` - Kills the process running on the specified port as nodemon sometimes doesn't restart correctly
