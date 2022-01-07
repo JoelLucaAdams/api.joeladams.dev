@@ -6,13 +6,23 @@ This is my first project written from the ground up in Typescript. I've not real
 
 1. `npm install` - installs all the node dependencies
 2. Create a `.env` with the following information. The backend is expecting to use postgresql as a database but can also with many other databases if need be. Simply change the line called `client` in `/db/knexfile.ts` to another database and it should in theory work flawlessly. For the `TOKEN_SECRET` just generate a random token (e.g. `require('crypto').randomBytes(64).toString('hex')`).
-```
-PORT
-URL
-DB_DATABASE
-USER
-DB_PASSWORD
-TOKEN_SECRET
-```
-2. `npm run migrate` - creates or migrates the database
-2. `npm start` - Starts up the project on the specified port
+
+    ```env
+    PORT
+    URL
+    DB_DATABASE
+    USER
+    DB_PASSWORD
+    TOKEN_SECRET
+    ```
+
+3. `npm start` - Starts up the project on the specified port
+
+## Commands
+
+- `npm start` - Runs and builds the project
+- `npm run build` - Compiles the Typescript code to JavaScript
+- `npm run database-build` - Creates the database, migrates to the latest versions and runs seeding. (`npm dev` runs this every time)
+- `npm run database-teardown` - Rolls-back the latest database migration
+- `npm run database-update` - Runs the latest migration
+- `npm run kill-port` - Kills the process running on the specified port as nodemon sometimes doesn't restart correctly

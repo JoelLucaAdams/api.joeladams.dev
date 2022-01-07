@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "prestart": "npm run database-build",
-    "dev": "nodemon --files index.ts | pino-pretty",
+    "start": "nodemon --files index.ts | pino-pretty",
+    "build": "tsc",
     "database-build": "ts-node knex/createDB.ts && npx knex migrate:latest --knexfile knex/knexfile.ts && npx knex seed:run --knexfile knex/knexfile.ts",
     "database-teardown": "npx knex migrate:rollback --knexfile knex/knexfile.ts",
     "database-update": "npx knex migrate:latest --knexfile knex/knexfile.ts",
-    "kill-port": "sudo kill -9 `sudo lsof -t -i:8081`"
+    "kill-port": "sh kill-port.sh"
   },
   "keywords": [],
   "author": "",
