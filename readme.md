@@ -22,7 +22,7 @@ This is my first project written from the ground up in Typescript. I've not real
 
 - `npm start` - Runs and builds the project
 - `npm run build` - Compiles the Typescript code to JavaScript in the `/dist` folder
-- `npm run node-build` - Runs the compiled JavaScript build
+- `npm run build:run` - Runs the compiled JavaScript build
 - `npm run database-build` - Creates the database, migrates to the latest versions and runs seeding. (`npm start` runs this every time)
 - `npm run database-teardown` - Rolls-back the latest database migration
 - `npm run database-update` - Runs the latest migration
