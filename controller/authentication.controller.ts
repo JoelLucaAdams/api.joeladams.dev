@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { getUser } from '../service/users.service';
 import { UserParams } from '../interfaces/users.interface';
-import { generateAccessToken } from '../middleware';
+import { generateAccessToken } from '../middleware/auth';
 import log from '../log';
 
 async function authenticateUserController(req: Request<{}, {}, UserParams>, res: Response) {
