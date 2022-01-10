@@ -7,6 +7,7 @@
     "prestart": "npm run database-build",
     "start": "nodemon --files index.ts | pino-pretty",
     "build": "tsc",
+    "node-build": "node dist/index.js | pino-pretty",
     "database-build": "ts-node knex/createDB.ts && npx knex migrate:latest && npx knex seed:run",
     "database-teardown": "npx knex migrate:rollback",
     "database-update": "npx knex migrate:latest",
