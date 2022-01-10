@@ -26,3 +26,4 @@ This is my first project written from the ground up in Typescript. I've not real
 - `npm run database-teardown` - Rolls-back the latest database migration
 - `npm run database-update` - Runs the latest migration
 - `npm run kill-port` - Kills the process running on the specified port as nodemon sometimes doesn't restart correctly
+- `npm run prettier` - Runs prettier on the codebase (recommended before push)
