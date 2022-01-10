@@ -7,9 +7,9 @@
     "prestart": "npx prettier --write . --loglevel warn && echo \"$(tput setaf 6) Ran Prettier formatter$(tput setaf 7)\" && npm run database-build",
     "start": "nodemon --files index.ts | pino-pretty",
     "build": "tsc",
-    "database-build": "ts-node knex/createDB.ts && npx knex migrate:latest --knexfile knex/knexfile.ts && npx knex seed:run --knexfile knex/knexfile.ts",
-    "database-teardown": "npx knex migrate:rollback --knexfile knex/knexfile.ts",
-    "database-update": "npx knex migrate:latest --knexfile knex/knexfile.ts",
+    "database-build": "ts-node knex/createDB.ts && npx knex migrate:latest && npx knex seed:run",
+    "database-teardown": "npx knex migrate:rollback",
+    "database-update": "npx knex migrate:latest",
     "kill-port": "sh kill-port.sh"
   },
   "keywords": [],
