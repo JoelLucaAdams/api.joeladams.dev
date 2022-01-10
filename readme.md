@@ -1,4 +1,4 @@
-# Backend API written entirely in Typescript!
+# Backend API written entirely in Typescript
 
 This is my first project written from the ground up in Typescript. I've not really had a chance to work with it before but thought I'd give it a shot so that I could have a practical application to show others
 
@@ -28,3 +28,14 @@ This is my first project written from the ground up in Typescript. I've not real
 - `npm run database-update` - Runs the latest migration
 - `npm run kill-port` - Kills the process running on the specified port as nodemon sometimes doesn't restart correctly
 - `npm run prettier` - Runs prettier on the codebase (recommended before push)
+
+## Tech stack
+
+- Typescript
+- knex
+- nodemon
+- JSON Web Tokens
+- pino-pretty logging
+- eslint
+- prettier
+- tsc
