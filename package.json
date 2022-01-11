@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "prestart": "npm run database-build",
-    "start": "nodemon --files index.ts | pino-pretty",
+    "start": "ts-node-dev --files index.ts | pino-pretty",
     "build": "tsc",
     "build:run": "node dist/index.js | pino-pretty",
-    "database-build": "ts-node knex/createDB.ts && npx knex migrate:latest && npx knex seed:run",
+    "database-build": "ts-node-dev knex/createDB.ts && npx knex migrate:latest && npx knex seed:run",
     "database-teardown": "npx knex migrate:rollback",
     "database-update": "npx knex migrate:latest",
     "kill-port": "sh kill-port.sh",
@@ -48,9 +48,9 @@
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-prettier": "^4.0.0",
     "express-pino-logger": "^7.0.0",
-    "nodemon": "^2.0.15",
     "npx": "^10.2.2",
     "pino-pretty": "^7.3.0",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "ts-node-dev": "^1.1.8"
   }
 }
