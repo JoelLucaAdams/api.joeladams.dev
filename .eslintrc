@@ -1,71 +1,71 @@
 {
-  "rules": {
-    "indent": [
-      "error",
-      4,
-      {
-        "SwitchCase": 1
-      }
-    ],
-    "max-len": ["error", 500],
-    "space-before-function-paren": [
-      2,
-      {
-        "anonymous": "always",
-        "named": "never"
-      }
-    ],
-    "array-element-newline": ["error", "never"],
-    "semi": "off",
-    "@typescript-eslint/semi": ["error", "ignore-interfaces"],
-    "no-extra-semi": "off",
-    "@typescript-eslint/no-extra-semi": ["error"],
-    "no-plusplus": 0,
-    "func-names": ["error", "never"],
-    "consistent-return": "off",
-    "no-restricted-globals": "off",
-    "arrow-parens": 0,
-    "arrow-body-style": 0,
-    "no-use-before-define": [2, "nofunc"],
-    "object-curly-newline": "off",
-    "no-continue": "off",
-    "no-lonely-if": "off",
-    "no-console": 0,
-    "no-await-in-loop": 0,
-    "no-param-reassign": 0,
-    "global-require": 0,
-    "no-else-return": 0,
-    "no-prototype-builtins": 0,
-    "comma-dangle": [0],
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": true
-      }
-    ],
-    "no-underscore-dangle": [0],
-    "no-restricted-syntax": ["error", "ForInStatement", "LabeledStatement", "WithStatement"]
-  },
-  "env": {
-    "node": true,
-    "mocha": true
-  },
-  "globals": {
-    "angular": true,
-    "Chart": true,
-    "moment": true
-  },
-  "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module"
-  },
-  "parser": "@typescript-eslint/parser",
-  "extends": ["eslint:recommended", "airbnb-base", "airbnb-typescript/base"],
-  "settings": {
-    "import/resolver": {
-      "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
-    }
-  }
+	"rules": {
+		"indent": [
+			"error",
+			4,
+			{
+				"SwitchCase": 1
+			}
+		],
+		"max-len": ["error", 500],
+		"space-before-function-paren": [
+			2,
+			{
+				"anonymous": "always",
+				"named": "never"
+			}
+		],
+		"array-element-newline": ["error", "never"],
+		"semi": "off",
+		"@typescript-eslint/semi": ["error", "ignore-interfaces"],
+		"no-extra-semi": "off",
+		"@typescript-eslint/no-extra-semi": ["error"],
+		"no-plusplus": 0,
+		"func-names": ["error", "never"],
+		"consistent-return": "off",
+		"no-restricted-globals": "off",
+		"arrow-parens": 0,
+		"arrow-body-style": 0,
+		"no-use-before-define": [2, "nofunc"],
+		"object-curly-newline": "off",
+		"no-continue": "off",
+		"no-lonely-if": "off",
+		"no-console": 0,
+		"no-await-in-loop": 0,
+		"no-param-reassign": 0,
+		"global-require": 0,
+		"no-else-return": 0,
+		"no-prototype-builtins": 0,
+		"comma-dangle": [0],
+		"import/no-extraneous-dependencies": [
+			"error",
+			{
+				"devDependencies": true
+			}
+		],
+		"no-underscore-dangle": [0],
+		"no-restricted-syntax": ["error", "ForInStatement", "LabeledStatement", "WithStatement"]
+	},
+	"env": {
+		"node": true,
+		"mocha": true
+	},
+	"globals": {
+		"angular": true,
+		"Chart": true,
+		"moment": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 2018,
+		"sourceType": "module"
+	},
+	"parser": "@typescript-eslint/parser",
+	"extends": ["eslint:recommended", "airbnb-base", "airbnb-typescript/base"],
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"extensions": [".js", ".jsx", ".ts", ".tsx"]
+			}
+		}
+	}
 }

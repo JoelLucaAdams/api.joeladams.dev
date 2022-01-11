@@ -23,16 +23,16 @@ app.use('/swagger', swaggerUI.serve, swaggerUI.setup(swaggerTemplate));
 app.use(router);
 
 if (!process.env.PORT || !process.env.URL) {
-  log.error('Cannot startup webserver. Missing a PORT or URL');
+	log.error('Cannot startup webserver. Missing a PORT or URL');
 }
 
 if (!process.env.TOKEN_SECRET || !process.env.DB_DATABASE || !process.env.USER || !process.env.DB_PASSWORD) {
-  log.error('missing a TOKEN_SECRET, USER, DB_DATABASE or DB_PASSWORD variable. Please set these in the .env file');
+	log.error('missing a TOKEN_SECRET, USER, DB_DATABASE or DB_PASSWORD variable. Please set these in the .env file');
 }
 
 app.listen(PORT, () => {
-  log.info(`Local URL: ${LOCALURL}${PORT}`);
-  log.info(`WEB URL: ${URL}`);
+	log.info(`Local URL: ${LOCALURL}${PORT}`);
+	log.info(`WEB URL: ${URL}`);
 });
 
 export default app;
