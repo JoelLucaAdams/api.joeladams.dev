@@ -39,3 +39,4 @@ This is my first project written from the ground up in Typescript. I've not real
 - eslint
 - prettier
 - tsc
+- swagger

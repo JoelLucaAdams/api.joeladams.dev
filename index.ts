@@ -2,11 +2,12 @@ import express from 'express';
 import expressPinoLogger from 'express-pino-logger';
 import dotenev from 'dotenv';
 import favicon from 'serve-favicon';
+import swaggerUI from 'swagger-ui-express';
 
 import router from './routes';
 import log from './log';
 import path from 'path';
-
+import swaggerTemplate from './swagger';
 const app = express();
 dotenev.config();
 
@@ -18,6 +19,7 @@ app.use(express.json({ limit: 3145728 }));
 app.use(express.urlencoded({ extended: false }));
 app.use(favicon(path.join(__dirname, '/favicon.png')));
 app.use(expressPinoLogger({ logger: log }));
+app.use('/swagger', swaggerUI.serve, swaggerUI.setup(swaggerTemplate));
 app.use(router);
 
 if (!process.env.PORT || !process.env.URL) {
