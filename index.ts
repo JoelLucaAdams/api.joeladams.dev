@@ -1,6 +1,6 @@
+import 'dotenv/config';
 import express from 'express';
 import expressPinoLogger from 'express-pino-logger';
-import dotenev from 'dotenv';
 import favicon from 'serve-favicon';
 import swaggerUI from 'swagger-ui-express';
 
@@ -9,7 +9,6 @@ import log from './log';
 import path from 'path';
 import swaggerTemplate from './swagger';
 const app = express();
-dotenev.config();
 
 const PORT = process.env.PORT;
 const LOCALURL = 'http://localhost:';

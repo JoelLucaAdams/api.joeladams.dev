@@ -1,9 +1,6 @@
 import jwt from 'jsonwebtoken';
-import dotenv from 'dotenv';
 import { Request, Response, NextFunction } from 'express';
 import log from '../log';
-
-dotenv.config();
 
 function generateAccessToken(username: object) {
     return jwt.sign(username, process.env.TOKEN_SECRET as string, { expiresIn: '1800s' });
